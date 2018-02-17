@@ -37,9 +37,15 @@ public class TestLambda {
 	public void test() {
 		List<Employee> emp = Arrays.asList(new Employee("Kalyan", "66TTRE","SYNTEL", 68666, "500765"));
 		Employee empMaxSalary = new Employee("Rohit", "34TF57","TCS", 90000, "323456");
-		assertEquals(1, test.getEmployeeCountOfACompany(list, "SYNTEL"));
 		assertEquals(emp, test.getEmployeeListOACompany(list, "SYNTEL"));
 		assertEquals(empMaxSalary, test.getMaxSalaryPersonOfACompany(list, "TCS"));	
 	}
-
+	@Test
+	public void getEmployeeCountOfACompany() {
+		assertEquals(2, test.getEmployeeCountOfACompany(list, "TCS"));
+		assertEquals(2, test.getEmployeeCountOfACompany(list, "INFOSYS"));
+		assertEquals(2, test.getEmployeeCountOfACompany(list, "AMEX"));
+		assertEquals(1, test.getEmployeeCountOfACompany(list, "GOOGLE"));
+	}
+	
 }
