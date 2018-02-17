@@ -4,6 +4,7 @@ import com.ankur.javabrains.model.Employee;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.*;
+import java.util.stream.Collectors;
 
 import javax.swing.border.EmptyBorder;
 
@@ -19,7 +20,7 @@ public class LambdaTest {
 	 */
 	public List<Employee> getEmployeeListOACompany(List<Employee> list, String comanyName){
 				
-		list.stream().filter(e->e.)
+		return list.stream().filter(e->e.getCompany().equals(comanyName)).collect(Collectors.toList());
 	}
 	
 	public List<Employee> getEmployeeList() {
