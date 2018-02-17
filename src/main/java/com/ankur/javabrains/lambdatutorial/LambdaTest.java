@@ -13,6 +13,7 @@ public class LambdaTest {
 	List<Employee> employeeList=initializeEmployee();
 	public static void main(String[] args) {
 		LambdaTest test = new LambdaTest();
+		System.out.println(test.getEmployeeListOACompany(test.employeeList, "SYNTEL"));
 	}
 	
 	/*
@@ -21,6 +22,15 @@ public class LambdaTest {
 	public List<Employee> getEmployeeListOACompany(List<Employee> list, String comanyName){
 				
 		return list.stream().filter(e->e.getCompany().equals(comanyName)).collect(Collectors.toList());
+	}
+	
+	public int getEmployeeCountOfACompany(List<Employee> list, String comanyName) {
+		return (int)list.stream().filter(e->e.getCompany().equals(comanyName)).count();
+	}
+	
+	public Employee getMaxSalaryPersonOfACompany(List<Employee> list, String compnayName) {
+		return list.parallelStream().filter(e->e.getCompany().equalsIgnoreCase(compnayName)).
+				max((e1,e2)-> e1.getSalary()-e2.getSalary()).get();
 	}
 	
 	public List<Employee> getEmployeeList() {

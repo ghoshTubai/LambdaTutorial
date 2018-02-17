@@ -5,6 +5,11 @@ public class Employee {
 	String name;
 	String ssn;
 	String company;
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", ssn=" + ssn + ", company=" + company + ", salary=" + salary
+				+ ", employeeId=" + employeeId + "]";
+	}
 	int salary;
 	String employeeId;
 	
