@@ -14,6 +14,7 @@ public class LambdaTest {
 	public static void main(String[] args) {
 		LambdaTest test = new LambdaTest();
 		System.out.println(test.getEmployeeListOfACompanySortedBySalary(test.employeeList, "TCS"));
+
 	}
 	
 	/*
