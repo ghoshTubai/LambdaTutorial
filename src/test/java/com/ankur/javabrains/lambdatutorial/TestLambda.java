@@ -42,7 +42,7 @@ public class TestLambda {
 	}
 	@Test
 	public void getEmployeeCountOfACompany() {
-		assertEquals(2, test.getEmployeeCountOfACompany(list, "TCS"));
+		assertEquals(1, test.getEmployeeCountOfACompany(list, "TCS"));
 		assertEquals(2, test.getEmployeeCountOfACompany(list, "INFOSYS"));
 		assertEquals(2, test.getEmployeeCountOfACompany(list, "AMEX"));
 		assertEquals(1, test.getEmployeeCountOfACompany(list, "GOOGLE"));
