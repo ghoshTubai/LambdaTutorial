@@ -4,6 +4,12 @@ public class Person {
 
 	String name;
 	String country;
+	
+	public Person(String name, String country) {
+		this.name=name;
+		this.country=country;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -18,7 +24,7 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", country=" + country + "]";
+		return name;
 	}
 	@Override
 	public int hashCode() {
